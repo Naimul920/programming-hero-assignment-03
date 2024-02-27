@@ -5,15 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-03</title>
-
+    <!--------------- tailwind and daisyUI link -------------->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!--------------- Google font -------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+    <!--------------- tailwind color -------------->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btnbg: '#FF4240',
+                        textColor1: '#131318',
+                        navTextColor: '#424247',
+                        textColor: '#131318',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <header>
-        <div class="container mx-auto">
+<body class="font-manrope">
+    <header class="container mx-auto mt-10">
+        <div class="mb-14">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -25,24 +48,23 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  text-navTextColor  text-base  font-semibold">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl uppercase">Genius</a>
+                    <a class="uppercase text-textColor1 font-bold text-2xl">Genius</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Item 3</a></li>
+                    <ul class="menu menu-horizontal px-1 text-navTextColor  text-base  font-semibold">
+                        <li><a><span class="text-btnbg">Home</span></a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar-end">
@@ -53,12 +75,72 @@
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </button>
-                    <a class="btn">Button</a>
+                    <a class="btn bg-btnbg text-white">Get Ticket</a>
+                </div>
+            </div>
+        </div>
+        <!--------------- carousel section ------------------>
+        <div>
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full h-5/6" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <div class="mt-96">
+                            <a href="#slide4" class="btn btn-circle bg-black text-white border-none">❮</a>
+                            <a href="#slide2" class="btn btn-circle bg-black text-white border-none">❯</a>
+                        </div>
+                        <div class="bg-black h-40 rounded-xl  p-9 w-1/3 mt-72 space-y-2">
+                            <h3 class="text-white text-lg font-bold	">Meet all the heroes from the field</h3>
+                            <p class="text-white text-sm font-normal">Dit amet consectetur. Condimentum dignissim
+                                adipiscing <br>
+                                aliquam turpis
+                                placerat dolor. Purus urna in sit nullam proin. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <main></main>
+    <main class="container mx-auto">
+        <section>
+            <div class="text-center space-y-3">
+                <h1 class="text-textColor1 font-extrabold  text-2xl">Professional Hockeys Club</h1>
+                <p class="text-textColor">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat
+                    <br> dolor. Purus urna in sit nullam proin.
+                </p>
+            </div>
+            <div class="flex gap-36 justify-center mt-12 text-center p-12">
+                <div>
+                    <div class="radial-progress text-btnbg" style="--value:87;" role="progressbar">87%</div>
+                    <h4 class="text-textColor1 font-semibold text-lg">Prayer Facility</h4>
+                    <p class="text-textColor font-normal text-sm">Amet consectetur. Condimentum <br> dignissim
+                        adipiscing .
+                    </p>
+                </div>
+                <div>
+                    <div class="radial-progress text-[#49D293]" style="--value:95;" role="progressbar">95%</div>
+                    <h4 class="text-textColor1 font-semibold text-lg">Experienced Coach</h4>
+                    <p class="text-textColor font-normal text-sm">Amet consectetur. Condimentum <br> dignissim
+                        adipiscing .
+                    </p>
+                </div>
+                <div>
+                    <div class="radial-progress text-[#FFB546]" style="--value:90;" role="progressbar">90%</div>
+                    <h4 class="text-textColor1 font-semibold text-lg">Senior Player</h4>
+                    <p class="text-textColor font-normal text-sm">Amet consectetur. Condimentum <br> dignissim
+                        adipiscing .
+                    </p>
+                </div>
+                <div>
+                    <div class="radial-progress text-[#4C8DF1]" style="--value:80;" role="progressbar">80%</div>
+                    <h4 class="text-textColor1 font-semibold text-lg">Training Ground</h4>
+                    <p class="text-textColor font-normal text-sm">Amet consectetur. Condimentum <br> dignissim
+                        adipiscing .
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 
